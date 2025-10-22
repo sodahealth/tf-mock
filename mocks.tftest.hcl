@@ -105,17 +105,17 @@ run "plan_with_mocks" {
   }
 
 assert {
-  condition     = contains(google_project_iam_member.mock_for_loop, "roles/bigquery.connectionUser")
+  condition     = contains([for m in values(google_project_iam_member.mock_for_loop) : m.role], "roles/bigquery.connectionUser")
   error_message = "Project IAM member should have 'roles/bigquery.connectionUser' role"
 }
 
 assert {
-  condition     = contains(google_project_iam_member.mock_for_loop, "roles/bigquery.user")
+  condition     = contains([for m in values(google_project_iam_member.mock_for_loop) : m.role], "roles/bigquery.user")
   error_message = "Project IAM member should have 'roles/bigquery.user' role"
 }
 
 assert {
-  condition     = contains(google_project_iam_member.mock_for_loop, "roles/bigquery.dataEditor")
+  condition     = contains([for m in values(google_project_iam_member.mock_for_loop) : m.role], "roles/bigquery.dataEditor")
   error_message = "Project IAM member should have 'roles/bigquery.dataEditor' role"
 }
 
