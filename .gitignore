@@ -1,0 +1,41 @@
+# Terraform
+.terraform/
+**/.terraform/**
+**/.terragrunt-cache/**
+terraform.tfstate
+terraform.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+*.tfvars
+*.tfvars.json
+*.tfplan
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Env/secrets
+.env
+.env.*
+secrets.*
+*.pem
+*.key
+
+# Node (if present)
+node_modules/
+
+# Temp/build outputs
+tmp/
+build/
+dist/
+coverage/
+*.zip
+
+

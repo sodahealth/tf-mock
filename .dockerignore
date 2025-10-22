@@ -1,0 +1,41 @@
+# VCS
+.git
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Terraform local artifacts
+**/.terraform/**
+**/.terragrunt-cache/**
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.*
+**/crash.log
+**/crash.*.log
+**/*.tfvars
+**/*.tfvars.json
+**/*.tfplan
+
+# Temp/build outputs
+tmp/
+**/tmp/**
+build/
+dist/
+coverage/
+*.zip
+
+# Node (if present)
+node_modules/
+
+# Env/secrets
+.env
+.env.*
+**/secrets.*
+**/*.pem
+**/*.key
+
+

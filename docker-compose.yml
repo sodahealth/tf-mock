@@ -1,0 +1,16 @@
+services:
+  tf:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+      - tf_plugin_cache:/root/.terraform.d/plugin-cache
+    environment:
+      - TF_INPUT=false
+      - TF_IN_AUTOMATION=true
+      - TF_PLUGIN_CACHE_DIR=/root/.terraform.d/plugin-cache
+
+volumes:
+  tf_plugin_cache:
