@@ -14,3 +14,9 @@ variable "zone" {
   type        = string
   default     = "us-central1-a"
 }
+
+variable "default_creds" {
+  description = "Default AWS credentials key"
+  type        = string
+  default     = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+}

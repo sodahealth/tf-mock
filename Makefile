@@ -9,4 +9,5 @@ init:
 test:
 	$(DOCKER_COMPOSE) run --rm $(SERVICE) test
 
-
+check:
+	./ci/check.sh
