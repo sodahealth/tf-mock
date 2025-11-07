@@ -1,0 +1,20 @@
+# Verify that the repo is formatted properly.
+# If you find this error popping up, run the following at the root:
+# terragrunt run-all fmt
+
+name: terraform-lint
+
+on:
+  pull_request:
+    branches: [main]
+    types: [labeled, opened, synchronize]
+
+jobs:
+  static-analysis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Lint Terraform
+        uses: actionshub/terraform-lint@9e854ecdc0cedda954adfffccced9f71dc12fda0
